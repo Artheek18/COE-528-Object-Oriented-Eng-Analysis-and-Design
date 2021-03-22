@@ -1,0 +1,44 @@
+//Requires: integer arrays a and b must not be null    
+//Modifies: the max value of a     
+//Effects:  Values of integer array a and b are checked to find the max value. Max value of a swaps with max value of b
+
+
+
+
+public static void substituteMax(int[] a, int[] b) {
+
+	int maxOfA = a[0];
+
+	int index = 0;
+
+
+	for (int i = 0; i < a.length; i++) {
+
+		if(a[i] > maxOfA) {
+
+		maxOfA = a[i];
+
+		index = i;
+
+		}
+
+	}
+
+
+	int maxOfB = b[0];
+
+	for (int i = 0; i < b.length; i++) {
+
+		if(b[i] > maxOfB) {
+
+			maxOfB = b[i];
+
+		}
+
+	}
+
+
+	a[index] = maxOfB;
+
+}
+
